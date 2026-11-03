@@ -211,6 +211,49 @@
 
 ---
 
+## 7. 编写指南详解
+
+### When to use（必填）
+
+**目的**：帮助用户快速判断是否适用
+
+✅ **好的示例**：
+- Before submitting code changes or pull requests
+- When CI quality gate fails on formatting/linting
+
+❌ **避免**：
+- Code review or security auditing (use `code-review` instead)
+
+### GUIDE.md 编写规范
+
+**GUIDE.md 的角色**：
+- 提供背景知识、核心概念
+- 包含决策树、工作流、判断逻辑
+- 为专业用户提供深度指导
+
+**推荐结构**：
+1. **背景与原理** - 核心概念、术语、假设
+2. **决策树** - 何时选择方案 A vs B
+3. **案例研究** - 实际应用示例
+4. **常见陷阱** - 用户可能犯的错误
+5. **参考** - 链接到外部资源
+
+**避免**：
+- ❌ 重复 SKILL.md 的内容
+- ❌ 过度细节导致文档过长（500+ 行）
+- ❌ 假设用户已看过其他 SkillsDE.md（可选）
+
+**目的**：提供背景知识、决策树、实现细节
+
+**结构**：
+1. 背景知识 - 核心概念
+2. 决策树 - 场景选择
+3. 案例研究 - 实际应用
+4. 常见陷阱 - 错误示例
+5. 参考 - 外部资源
+
+---
+
 ## 常见问题
 
 **Q: 可选章节会被 validate_skills.py 检查吗？**
