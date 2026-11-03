@@ -1,17 +1,22 @@
 ---
 name: unit-test-development
-description: Develop unit tests for new code changes or regression tests for bug fixes in TurboPhysAI.
+description: Develop unit tests for new code changes, operators, or regression tests for bug fixes using pytest and coverage in TurboPhysAI.
 ---
 
 ## When to use
-- Adding new features, operators, or optimization groups requiring test coverage.
-- Writing regression tests for fixed bugs or CI failures.
+- Adding new features, custom operators, or optimization groups
+- Writing regression tests for bug fixes
+- Improving code coverage for critical paths
+- Before submitting a PR with new functionality
 
 ## When not to use
-- For full end-to-end model training correctness evaluation (use `model-correctness-validation` instead).
+- For integration tests requiring full system setup or HCU hardware (those use `@pytest.mark.hcu` and are managed separately)
+- For performance benchmarking (use dedicated benchmark suite)
 
 ## Inputs expected
-- Target code changes, expected behaviors, and existing test patterns under `test/`.
+- Source code file paths or git diff of changes
+- Description of what needs testing or which bugs to regress-test
 
 ## Outputs required
-- Unit test code, execution results, test coverage summary, and edge case coverage notes.
+- Test case code (`test_*.py` files), coverage reports, and test run logs
+- Summary of test coverage increase and critical paths verified
