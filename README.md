@@ -100,9 +100,16 @@ TurboPhysAI 支持基于 Agent Skills 的体系化开发辅助，覆盖代码质
 - **技能源目录**：`.agents/skills/`（包含 13 个 MVP 技能入口）
 - **仓库级规则**：[AGENTS.md](AGENTS.md)
 - **结构规范**：[.agents/SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
-- **结构校验工具**：
+- **核心校验与合规工具**：
   ```bash
+  # 1. L0 结构校验
   python3 scripts/agent/validate_skills.py --root .agents/skills
+
+  # 2. 开源身份与 Commit 合规检查
+  python3 scripts/agent/check_commit_compliance.py
+
+  # 3. 文档卫生与链接检查
+  python3 scripts/check_docs.py
   ```
 
 版本记录：[RELEASE_NOTES.md](RELEASE_NOTES.md) · 安全问题：[SECURITY.md](SECURITY.md) · 问题和需求：通过仓库 Issue 或 Pull Request（PR）反馈。
