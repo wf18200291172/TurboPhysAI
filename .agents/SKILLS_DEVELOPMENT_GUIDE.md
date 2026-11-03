@@ -5,8 +5,9 @@
 本文档列出所有 13 个 Skills 所需的资料、文档、工具和测试环境。
 
 **相关规范文档**：
-- [.agents/SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md) - Skill 文件结构与规范
-- [.agents/TEMPLATE.md](.agents/TEMPLATE.md) - Skill 模板
+- [SKILL_STRUCTURE_SPECIFICATION.md](SKILL_STRUCTURE_SPECIFICATION.md) - Skill 文件结构与规范
+- [TEMPLATE.md](TEMPLATE.md) - Skill 模板
+- [../AGENTS.md](../AGENTS.md) - 仓库级 Agent 规则ll 模板
 - [AGENTS.md](AGENTS.md) - 仓库级 Agent 规则
 
 ---
