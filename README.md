@@ -99,6 +99,8 @@ TurboPhysAI 支持基于 Agent Skills 的体系化开发辅助，覆盖代码质
 
 - **技能源目录**：`.agents/skills/`（包含 13 个 MVP 技能入口）
 - **仓库级规则**：[AGENTS.md](AGENTS.md)
+- **开发指南**：[SKILLS_DEVELOPMENT_GUIDE.md](SKILLS_DEVELOPMENT_GUIDE.md)（13 个 MVP Skills 速查表与复用策略）
+- **适配指南**：[HCU_ADAPTATION_GUIDE.md](HCU_ADAPTATION_GUIDE.md)（Hygon HCU 环境适配清单）
 - **结构规范**：[.agents/SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
 - **核心校验与合规工具**：
   ```bash
