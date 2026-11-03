@@ -1,17 +1,25 @@
 ---
 name: performance-analysis-and-validation
-description: Identify runtime bottlenecks and verify whether optimizations deliver reliable performance speedups using profiling tools in TurboPhysAI.
+description: Identify runtime bottlenecks and verify whether optimizations deliver reliable performance speedups using DTK profiling tools on Hygon HCU.
 ---
 
 ## When to use
-- Analyzing performance hot-spots and profiling training bottlenecks on Hygon DCU.
-- Running ablation and comparative benchmarks for optimizations.
+- Analyzing operator-level performance hotspots in model training
+- Measuring speedup from optimizations before and after changes
+- Investigating latency regressions or throughput drops
 
 ## When not to use
-- For functional correctness testing or code style checks.
+- Static code analysis (use `code-review` instead)
+- Unit test debugging (use `ci-failure-diagnosis` instead)
+- First-pass model correctness validation (use `model-correctness-validation` first)
 
 ## Inputs expected
-- Profiling traces (hipprof/dtk), baseline vs optimized run configs, and hardware environment specs.
+- Pre/post optimization trace artifacts (`.trace`, `.timeline`, or equivalents from DTK profiler)
+- Model architecture and batch size
+- Hardware (HCU) configuration and DTK version
 
 ## Outputs required
-- Hotspot analysis report, comparative benchmark results, speedup conclusions, and verification logs.
+- Performance analysis report with operator-level breakdowns
+- Speedup measurements with confidence intervals
+- Bottleneck identification and prioritization
+- Recommendations for further optimization
