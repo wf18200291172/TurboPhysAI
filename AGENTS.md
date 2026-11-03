@@ -6,17 +6,19 @@
 
 ---
 
-## 2. Skill 开发工作流
+## 2. Skills 应用场景
 
-- **代码改动**：自动路由到 code-quality-check、unit-test-development、code-review
-- **CI 故障**：ci-failure-diagnosis  
-- **部署 / 发布**：release-compliance-check
-- **环境问题**：training-environment-validation
-- **性能分析**：performance-analysis-and-validation
+| 场景 | 适用 Skills |
+|------|-----------|
+| 代码改动 | code-quality-check、unit-test-development、code-review |
+| CI 故障 | ci-failure-diagnosis |
+| 部署发布 | release-compliance-check |
+| 环境问题 | training-environment-validation |
+| 性能优化 | performance-analysis-and-validation |
 
 ---
 
-## 3. Skill 文件结构
+## 3. Skill 编写规范
 
 每个 Skill 必须包含：
 
@@ -24,11 +26,11 @@
 - **GUIDE.md**：专业知识与决策指南
 - **evals/**：测试用例
 
-详见 [SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
+编写规范详见 [SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
 
 ---
 
-## 4. 校验与 CI
+## 4. Skill 验证与检查
 
 本地校验：
 ```bash
@@ -36,6 +38,11 @@ python3 scripts/agent/validate_skills.py --root .agents/skills
 python3 scripts/check_docs.py
 python3 scripts/agent/check_commit_compliance.py
 ```
+
+验证脚本说明：
+- [validate_skills.py](scripts/agent/README.md) - Skill 结构验证工具
+- [check_docs.py](scripts/README.md) - 文档卫生检查
+- [check_commit_compliance.py](scripts/agent/README.md) - 提交规范检查
 
 ---
 
@@ -63,5 +70,5 @@ python3 scripts/agent/check_commit_compliance.py
 
 ## 参考
 
-- [Skill 结构规范](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
+- [Skill 规范](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
 - [Skill 模板](.agents/TEMPLATE.md)
