@@ -394,9 +394,28 @@ evals/skills/
 ## 参考与规范
 
 - [Skill 结构规范](.agents/SKILL_STRUCTURE_SPECIFICATION.md) — **必读**：定义必需/可选章节与编写标准
-- [Skill 增强路线图](.agents/SKILL_ENHANCEMENT_ROADMAP.md) — 13 个 MVP Skills 的优化计划
 - [Skill 开发模板](.agents/TEMPLATE.md) — 快速创建新 Skill 的起点
 - [validate_skills.py 使用文档](scripts/agent/README.md) — L0 结构校验工具详解
 - [TurboPhysAI Skill 质量验证规范](../TurboPhysAI%20Skill%20质量验证规范.md) — L0-L5 完整评测框架
 - [MindIE-SD AGENTS.md](https://github.com/Ascend/MindIE-SD/blob/main/AGENTS.md) — 参考架构
 - [hygonpilot-skills README](../hygonpilot-skills-main/README.md) — Hygon DTK 优化 Skills
+
+---
+
+## 13 个 Skills 进度追踪表
+
+| Skill | Priority | Progress | Status | Reference Source | Reuse Strategy |
+|-------|----------|----------|--------|------------------|----|
+| **code-quality-check** | ⭐⭐⭐ | **✅ Complete** | ✅ 100% | Project config + hygonpilot/clean-code-style | Reference preflight mode |
+| **release-compliance-check** | ⭐⭐ | **✅ Complete** | ✅ 100% | `scripts/check_commit_compliance.py` + `scripts/check_docs.py` | Integrate existing tools |
+| **training-environment-validation** | ⭐⭐ | **✅ Complete** | ✅ 100% | hygonpilot-skills-main/env-probe/GUIDE.md | Direct reuse for HCU/DTK environment probing |
+| **unit-test-development** | ⭐⭐ | **✅ Complete** | ✅ 100% | Project `test/` directory + pytest configuration | Write standard pytest with @pytest.mark.hcu |
+| **performance-analysis-and-validation** | ⭐⭐ | **✅ Complete** | ✅ 100% | hygonpilot-skills-main/dtk-profiler-analysis/GUIDE.md | Direct reuse of DTK Profiler diagnostic steps |
+| **code-review** | ⭐⭐⭐ | **✅ Complete** | ✅ 100% | Actual TurboPhysAI PR feedback analysis (#28, #29, #19, #33, #32) | Decision tree & checklist based on real code review findings |
+| **ci-failure-diagnosis** | ⭐⭐⭐ | **⏳ Pending** | ⚠️ 40% | hygonpilot-skills-main/dtk-crash-debug/ | Adapt troubleshooting methodology |
+| **model-integration** | ⭐⭐⭐ | **⏳ Pending** | ⚠️ 30% | DrivingSDK/model-wrapper/ + MindIE-SD/model-integration/ | Reference 3-phase: migration → optimization → delivery |
+| **model-correctness-validation** | ⭐⭐⭐ | **⏳ Pending** | ⚠️ 20% | MindIE-SD/accuracy-gate/SKILL.md | Reference L1/L2/L3 layered acceptance standards |
+| **cookbook-reproduction-documentation** | ⭐ | **⏳ Pending** | ⚠️ 30% | Project cookbook examples | Reference existing structure |
+| **package-and-container-delivery** | ⭐⭐ | **⏳ Pending** | ⚠️ 30% | Project setup.py + docker/ci/Dockerfile | Adapt existing build & deployment scripts |
+| **ci-monitor-and-notify** | ⭐⭐ | **⏳ Pending** | ⚠️ 20% | GitHub Actions + CI workflow | Reference GitHub-based monitoring patterns |
+| **model-optimization-tuning** | ⭐⭐⭐ | **⏳ Pending** | ⚠️ 10% | hygonpilot + MindIE-SD optimization frameworks | Generalize optimization decision trees |
