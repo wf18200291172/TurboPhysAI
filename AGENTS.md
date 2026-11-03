@@ -39,15 +39,9 @@ python3 scripts/agent/check_commit_compliance.py
 
 ---
 
-## 参考
-
-- [Skill 结构规范](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
-- [Skill 模板](.agents/TEMPLATE.md)
-
-
 ---
 
-## 13 个 Skills 进度追踪表
+## 5. Skills 开发进度追踪表
 
 | Skill | Priority | Progress | Status | Reference Source | Reuse Strategy |
 |-------|----------|----------|--------|------------------|----|
@@ -64,3 +58,10 @@ python3 scripts/agent/check_commit_compliance.py
 | **package-and-container-delivery** | ⭐⭐ | **⏳ Pending** | ⚠️ 30% | Project setup.py + docker/ci/Dockerfile | Coordinate with release workflow |
 | **ci-monitor-and-notify** | ⭐⭐ | **⏳ Pending** | ⚠️ 10% | GitHub Actions + workflow monitoring | Reference hygonpilot CI monitoring strategy |
 | **optimization-tuning-advisor** | ⭐⭐⭐ | **⏳ Pending** | ⚠️ 5% | TurboPhysAI optimization configs | Multi-dimension optimization routing |
+
+---
+
+## 参考
+
+- [Skill 结构规范](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
+- [Skill 模板](.agents/TEMPLATE.md)
