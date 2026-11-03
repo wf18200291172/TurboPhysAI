@@ -2,7 +2,7 @@
 
 ## 1. 定位
 
-本文件定义 Agent Skills 体系、工作流规则和质量标准。
+本文件定义 TurboPhysAI 的 Agent Skills 体系、任务路由规则和开发标准。
 
 ---
 
