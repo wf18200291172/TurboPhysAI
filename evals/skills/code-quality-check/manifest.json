@@ -1,0 +1,30 @@
+{
+  "skill": "code-quality-check",
+  "version": "1.0",
+  "description": "Evaluation manifest for code-quality-check skill",
+  "routes": [
+    {
+      "id": "route_positive_1",
+      "prompt": "Check if my code changes adhere to the style guide",
+      "expected": "required"
+    },
+    {
+      "id": "route_positive_2",
+      "prompt": "CI failed on formatting, please check formatting issues",
+      "expected": "required"
+    },
+    {
+      "id": "route_negative_1",
+      "prompt": "Perform a deep security vulnerability audit on this authentication module",
+      "expected": "forbidden"
+    }
+  ],
+  "behavioral_cases": [
+    {
+      "id": "behavior_1",
+      "description": "Check and fix formatting on a sample file with style violations",
+      "input_fixture": "fixtures/unformatted.py",
+      "expected_outcome": "formatted_successfully"
+    }
+  ]
+}

@@ -93,6 +93,18 @@ TurboPhysAI/
 
 贡献说明见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
+### AI 辅助开发与 Agent Skills 体系
+
+TurboPhysAI 支持基于 Agent Skills 的体系化开发辅助，覆盖代码质量、单元测试、CI 排障、环境验证、模型集成与性能优化全流程。
+
+- **技能源目录**：`.agents/skills/`（包含 13 个 MVP 技能入口）
+- **仓库级规则**：[AGENTS.md](AGENTS.md)
+- **结构规范**：[.agents/SKILL_STRUCTURE_SPECIFICATION.md](.agents/SKILL_STRUCTURE_SPECIFICATION.md)
+- **结构校验工具**：
+  ```bash
+  python3 scripts/agent/validate_skills.py --root .agents/skills
+  ```
+
 版本记录：[RELEASE_NOTES.md](RELEASE_NOTES.md) · 安全问题：[SECURITY.md](SECURITY.md) · 问题和需求：通过仓库 Issue 或 Pull Request（PR）反馈。
 
 ## License
